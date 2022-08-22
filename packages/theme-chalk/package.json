@@ -1,0 +1,9 @@
+{
+  "name": "@queen-ui/theme-chalk",
+  "version": "0.0.0",
+  "module": "index.ts",
+  "types": "index.ts",
+  "scripts": {
+
+  }
+}

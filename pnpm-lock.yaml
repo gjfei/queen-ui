@@ -4,6 +4,7 @@ importers:
 
   .:
     specifiers:
+      '@queen-ui/components': workspace:*
       '@types/eslint': ^8.4.5
       '@typescript-eslint/eslint-plugin': ^5.33.1
       '@typescript-eslint/parser': ^5.33.1
@@ -21,6 +22,7 @@ importers:
       vue: ^3.2.37
       vue-eslint-parser: ^9.0.3
     dependencies:
+      '@queen-ui/components': link:packages/example
       vue: 3.2.37
     devDependencies:
       '@types/eslint': 8.4.5
@@ -41,6 +43,20 @@ importers:
 
   packages/components:
     specifiers:
+      '@queen-ui/shared': workspace:^0.0.0
+      '@queen-ui/theme-chalk': workspace:*
+    dependencies:
+      '@queen-ui/shared': link:../shared
+      '@queen-ui/theme-chalk': link:../theme-chalk
+
+  packages/docs:
+    specifiers:
+      vitepress: 1.0.0-alpha.8
+    dependencies:
+      vitepress: 1.0.0-alpha.8
+
+  packages/example:
+    specifiers:
       '@dcloudio/types': ^3.0.7
       '@dcloudio/uni-app': 3.0.0-alpha-3040820220424001
       '@dcloudio/uni-app-plus': 3.0.0-alpha-3040820220424001
@@ -57,7 +73,8 @@ importers:
       '@dcloudio/uni-mp-weixin': 3.0.0-alpha-3040820220424001
       '@dcloudio/uni-quickapp-webview': 3.0.0-alpha-3040820220424001
       '@dcloudio/vite-plugin-uni': 3.0.0-alpha-3040820220424001
-      pinia: ^2.0.18
+      '@queen-ui/components': workspace:*
+      '@queen-ui/theme-chalk': workspace:*
       vue-i18n: ^9.1.9
     dependencies:
       '@dcloudio/uni-app': 3.0.0-alpha-3040820220424001
@@ -72,19 +89,14 @@ importers:
       '@dcloudio/uni-mp-toutiao': 3.0.0-alpha-3040820220424001
       '@dcloudio/uni-mp-weixin': 3.0.0-alpha-3040820220424001
       '@dcloudio/uni-quickapp-webview': 3.0.0-alpha-3040820220424001
-      pinia: 2.0.18
+      '@queen-ui/components': link:../components
+      '@queen-ui/theme-chalk': link:../theme-chalk
       vue-i18n: 9.2.2
     devDependencies:
       '@dcloudio/types': 3.0.13
       '@dcloudio/uni-automator': 3.0.0-alpha-3040820220424001
       '@dcloudio/uni-cli-shared': 3.0.0-alpha-3040820220424001
       '@dcloudio/vite-plugin-uni': 3.0.0-alpha-3040820220424001
-
-  packages/docs:
-    specifiers:
-      vitepress: 1.0.0-alpha.8
-    dependencies:
-      vitepress: 1.0.0-alpha.8
 
   packages/shared:
     specifiers: {}
@@ -3358,22 +3370,6 @@ packages:
     resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
     engines: {node: '>=0.10.0'}
 
-  /pinia/2.0.18:
-    resolution: {integrity: sha512-I5MW05UVX6a5Djka136oH3VzYFiZUgeOApBwFjMx6pL91eHtGVlE3adjNUKLgtwGnrxiBRuJ8+4R3LKJKwnyZg==}
-    peerDependencies:
-      '@vue/composition-api': ^1.4.0
-      typescript: '>=4.4.4'
-      vue: ^2.6.14 || ^3.2.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-      typescript:
-        optional: true
-    dependencies:
-      '@vue/devtools-api': 6.2.1
-      vue-demi: 0.13.8
-    dev: false
-
   /postcss-import/14.1.0:
     resolution: {integrity: sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw==}
     engines: {node: '>=10.0.0'}
@@ -4044,19 +4040,6 @@ packages:
 
   /vscode-textmate/6.0.0:
     resolution: {integrity: sha512-gu73tuZfJgu+mvCSy4UZwd2JXykjK9zAZsfmDeut5dx/1a7FeTk0XwJsSuqQn+cuMCGVbIBfl+s53X4T19DnzQ==}
-    dev: false
-
-  /vue-demi/0.13.8:
-    resolution: {integrity: sha512-Vy1zbZhCOdsmvGR6tJhAvO5vhP7eiS8xkbYQSoVa7o6KlIy3W8Rc53ED4qI4qpeRDjv3mLfXSEpYU6Yq4pgXRg==}
-    engines: {node: '>=12'}
-    hasBin: true
-    requiresBuild: true
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^3.0.0-0 || ^2.6.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
     dev: false
 
   /vue-demi/0.13.8_vue@3.2.37:

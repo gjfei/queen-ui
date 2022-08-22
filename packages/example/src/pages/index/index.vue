@@ -1,5 +1,6 @@
 <template>
   <view class="content">
+    <qn-button />
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
       <text class="title">{{ title }}</text>
@@ -7,9 +8,18 @@
   </view>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue';
-const title = ref('Hello');
+<script lang="ts">
+import { QnButton } from '@queen-ui/components';
+export default {
+  components: {
+    QnButton,
+  },
+  data() {
+    return {
+      title: 'Hello',
+    };
+  },
+};
 </script>
 
 <style lang="scss">
