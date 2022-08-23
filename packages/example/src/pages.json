@@ -16,7 +16,7 @@
   "easycom": {
     "autoscan": true,
     "custom": {
-      "qn-(.*)": "@/queen-ui/src/$1/src/$1.vue",
+      "qn-(.*)": "@/uni_modules/queen-ui/components/src/$1/src/$1.vue",
       "a-(.*)": "@/components/$1.vue"
     }
   }

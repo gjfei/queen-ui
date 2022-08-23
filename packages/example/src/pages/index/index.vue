@@ -1,6 +1,7 @@
 <template>
   <view class="content">
     <qn-button />
+    <QnButton />
     <a-button />
     <image class="logo" src="/static/logo.png" />
   </view>

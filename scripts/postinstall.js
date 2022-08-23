@@ -1,5 +1,5 @@
-import { resolve } from 'path';
-import { execSync } from 'child_process';
+const { resolve } =require ('path');
+const { execSync } =require( 'child_process');
 
 const exampleDir = resolve(process.cwd(), 'packages/example');
 

@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "postinstall": "node ./scripts/postinstall.js",
     "docs:dev": "pnpm run -C packages/docs docs:dev",
