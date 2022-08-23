@@ -12,5 +12,12 @@
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "qn-(.*)": "@/queen-ui/src/$1/src/$1.vue",
+      "a-(.*)": "@/components/$1.vue"
+    }
   }
 }

@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "postinstall": "node ./scripts/postinstall.js",
     "docs:dev": "pnpm run -C packages/docs docs:dev",
     "docs:build": "pnpm run -C packages/docs docs:build",
     "docs:serve": "pnpm run -C packages/docs docs:serve",
@@ -40,7 +42,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@dcloudio/types": "^3.0.13",
     "@types/eslint": "^8.4.5",
+    "@types/node": "^18.7.10",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
     "@typescript-eslint/parser": "^5.33.1",
     "eslint": "^8.22.0",

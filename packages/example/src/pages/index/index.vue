@@ -1,26 +1,12 @@
 <template>
   <view class="content">
     <qn-button />
+    <a-button />
     <image class="logo" src="/static/logo.png" />
-    <view class="text-area">
-      <text class="title">{{ title }}</text>
-    </view>
   </view>
 </template>
 
-<script lang="ts">
-import { QnButton } from '@queen-ui/components';
-export default {
-  components: {
-    QnButton,
-  },
-  data() {
-    return {
-      title: 'Hello',
-    };
-  },
-};
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss">
 .content {

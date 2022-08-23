@@ -1,0 +1,8 @@
+@use 'mixins/function' as *;
+
+.qn-button {
+  background-color: red;
+  height: joinUnit(10);
+  padding:  joinUnit('10', '10');
+  color: #FFF;
+}

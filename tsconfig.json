@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitThis": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["@dcloudio/types", "vite/client"],
+    "jsx": "preserve",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "paths": {
+      "@queen-ui/*": ["packages/*"]
+    }
+  },
+  "include": [
+    "packages",
+    "typings/env.d.ts",
+  ],
+  "exclude": [
+    "**/dist"
+  ]
+}

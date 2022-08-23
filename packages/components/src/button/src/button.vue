@@ -1,7 +1,5 @@
 <template>
-  <view class="content">
-    <text class="title">{{ title }}</text>
-  </view>
+  <view class="qn-button"> {{ title }}</view>
 </template>
 
 <script setup lang="ts">

@@ -1,4 +1,4 @@
-@use 'config';
+@use 'config' as *;
 
 // BEM support Func
 @function selectorToString($selector) {
@@ -55,5 +55,16 @@
   }
 
   // @debug $name;
+  @return $name;
+}
+
+
+@function joinUnit($list...){
+  $name: '';
+  @each $item in $list {
+    @if $item != '' {
+      $name: #{$name} #{$item}#{$unit}
+    }
+  }
   @return $name;
 }
